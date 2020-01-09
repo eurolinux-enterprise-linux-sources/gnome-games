@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.10">
+<!ENTITY date "June 2005">
+<!ENTITY app "<application>Tetravex</application>">
+<!ENTITY appname "Tetravex">
+<!ENTITY version "2.10">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Feb 12, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="cs">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+ <articleinfo>
+  <title>Příručka ke hře <application>Tetravex</application></title>
+
+    <abstract role="description">
+      <para>Hra Tetravex je jednoduchý hlavolam, ve kterém máte kameny s čísly po stranách. Kameny musíte uspořádat tak, aby se navzájem dotýkaly stejnými čísly a během toho vám běží čas. Dosažené časy se pak zapisují na společnou výsledkovou listinu.</para>
+    </abstract>
+
+  <copyright>
+   <year>2001</year>
+   <holder>Rob Bradford</holder>
+  </copyright><copyright><year>2009.</year><holder>Marek Černocký (marek@manet.cz)</holder></copyright>
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername>Dokumentační projekt GNOME</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Je povoleno kopírovat, šířit a/nebo upravovat tento dokument za podmínek GNU Free Documentation License, verze 1.1 nebo jakékoli další verze vydané nadací Free Software Foundation; bez neměnných oddílů, bez textů předních desek a bez textů zadních desek. Kopie této licence je zahrnuta v oddílu jménem <ulink type="help" url="ghelp:fdl">GNU Free Documentation License</ulink> nebo v souboru COPYING-DOCS dodávaném s touto příručkou.</para>
+         <para>Tato příručka je součástí kolekce příruček GNOME, distribuovaných pod licencí GNU FDL. Pokud chcete tento dokument šířit odděleně od kolekce, musíte přiložit kopii licence dle popisu v sekci 6 dané licence.</para>
+
+	<para>Mnoho užívaných jmen určených k zviditelnění produktů nebo služeb jsou ochranné známky. Na místech, kde jsou tato jména v dokumentaci užita a členové Dokumentačního projektu GNOME jsou si vědomi skutečnosti, že se jedná o ochrannou známku, je takové jméno psáno velkými písmeny celé nebo s velkým písmenem na začátku.</para>
+
+	<para>DOKUMENT A JEHO UPRAVENÉ VERZE JSOU ŠÍŘENY V SOULADU SE ZNĚNÍM LICENCE GNU FREE DOCUMENTATION LICENSE S NÁSLEDUJÍCÍM USTANOVENÍM: <orderedlist>
+		<listitem>
+		  <para>DOKUMENT JE POSKYTOVÁN V PODOBĚ „JAK JE“ BEZ ZÁRUKY V JAKÉKOLIV PODOBĚ, NEPOSKYTUJÍ SE ANI ODVOZENÉ ZÁRUKY, ZÁRUKY, ŽE DOKUMENT, NEBO JEHO UPRAVENÁ VERZE, JE BEZCHYBNÝ NEBO ZÁRUKY PRODEJNOSTI, VHODNOSTI PRO URČITÝ ÚČEL NEBO NEPORUŠENOSTI. RIZIKO NEKVALITY, NEPŘESNOSTI A ŠPATNÉHO PROVEDENÍ DOKUMENTU, NEBO JEHO UPRAVENÉ VERZE, LEŽÍ NA VÁS. POKUD KVŮLI TOMUTO DOKUMENTU, NEBO JEHO UPRAVENÉ VERZI, NASTANE PROBLÉM, VY (NIKOLIV PŮVODNÍ AUTOR NEBO JAKÝKOLIV PŘISPĚVATEL) PŘEBÍRÁTE JAKÉKOLIV NÁKLADY ZA NUTNÉ ÚPRAVY, OPRAVY ČI SLUŽBY. TOTO PROHLÁŠENÍ O ZÁRUCE PŘEDSTAVUJE ZÁKLADNÍ SOUČÁST TÉTO LICENCE. BEZ TOHOTO PROHLÁŠENÍ NENÍ, PODLE TÉTO DOHODY, POVOLENO UŽÍVÁNÍ ANI ÚPRAVY TOHOTO DOKUMENTU; DÁLE</para>
+		</listitem>
+		<listitem>
+		  <para>ZA ŽÁDNÝCH OKOLNOSTÍ A ŽÁDNÝCH PRÁVNÍCH PŘEDPOKLADŮ, AŤ SE JEDNÁ O PŘEČIN (VČETNĚ NEDBALOSTNÍCH), SMLOUVU NEBO JINÉ, NENÍ AUTOR, PŮVODNÍ PISATEL, KTERÝKOLIV PŘISPĚVATEL NEBO KTERÝKOLIV DISTRIBUTOR TOHOTO DOKUMENTU NEBO UPRAVENÉ VERZE DOKUMENTU NEBO KTERÝKOLIV DODAVATEL NĚKTERÉ Z TĚCHTO STRAN ODPOVĚDNÝ NĚJAKÉ OSOBĚ ZA PŘÍMÉ, NEPŘÍMÉ, SPECIÁLNÍ, NAHODILÉ NEBO NÁSLEDNÉ ŠKODY JAKÉHOKOLIV CHARAKTERU, VČETNĚ, ALE NEJEN, ZA POŠKOZENÍ ZE ZTRÁTY DOBRÉHO JMÉNA, PŘERUŠENÍ PRÁCE, PORUCHY NEBO NESPRÁVNÉ FUNKCE POČÍTAČE NEBO JINÉHO A VŠECH DALŠÍCH ŠKOD NEBO ZTRÁT VYVSTÁVAJÍCÍCH Z NEBO VZTAHUJÍCÍCH SE K POUŽÍVÁNÍ TOHOTO DOKUMENTU NEBO UPRAVENÝCH VERZÍ DOKUMENTU, I KDYŽ BY TAKOVÁTO STRANA BYLA INFORMOVANÁ O MOŽNOSTI TAKOVÉHOTO POŠKOZENÍ.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Rob</firstname> 
+	<surname>Bradford</surname> 
+	<affiliation> 
+	  <address> <email>robster@debian.org</email> </address> 
+	</affiliation> 
+      </author> 
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review"/>
+
+    <revhistory>
+      <revision> 
+	<revnumber>Příručka V2.10 ke hře Tetravex</revnumber> 
+	<date>Červen 2005</date> 
+	<revdescription> 
+	  <para role="author">Rob Bradford <email>rob@funky-penguin.co.uk</email></para>
+	  <para role="publisher">Dokumentační projekt GNOME</para>
+	</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Tato příručka popisuje Tetravex ve verzi 2.12.</releaseinfo>
+    <!-- The following feedback information only applies to appliactions
+    listed in bugzilla.gnome.org and bugzilla.ximian.com. For other
+    applications, please provide your own feedback info or remove thsi
+    section altogether -->
+    <legalnotice> 
+      <title>Ohlasy</title> 
+      <para>Pokud chcete oznámit chybu nebo navrhnout vylepšení vztahující se k aplikaci <application>Tetravex</application> nebo této příručce, postupujte dle instrukcí na stránce <ulink url="ghelp:user-guide?feedback-bugs" type="help">Stránka s ohlasy na GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+ </articleinfo>
+
+  <indexterm zone="index"> 
+    <primary>GNOME Tetravex</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+ <sect1 id="intro">
+  <title>Úvod</title>
+
+  <para><application>GNOME Tetravex</application> je jednoduchý hlavolam, ve kterém se musí uspořádat kameny tak, aby se navzájem dotýkaly stejnými čísly. Hraje se na čas a výsledný čas se ukládá do společné tabulky výsledných skóre.</para>
+    
+  <para><application>GNOME Tetravex</application> spustíte tak, že zvolíte <menuchoice><guisubmenu>Hry</guisubmenu><guimenuitem>Tetravex</guimenuitem></menuchoice> v <guimenu>hlavní nabídce</guimenu> nebo napíšete <command>gnotravex</command> v příkazovém řádku.</para>
+
+  <para><application>GNOME Tetravex</application> je součástí balíku <filename>gnome-games</filename>, který patří k pracovnímu prostředí GNOME. Tento dokument popisuje verzi 2.10 aplikace <application>GNOME Tetravex</application>.</para>
+ </sect1>
+
+ <sect1 id="usage"> 
+  <title>Jak hrát GNOME Tetravex</title>
+
+  <para>Hra <application>GNOME Tetravex</application> je jednoduchý hlavolam a tato kapitola odhaluje, jak tuto hru hrát.</para>
+
+  <sect2 id="mainwin">
+   <title>Základy použití</title>
+   <sect3 id="playing">
+    <title>Jak hru hrát</title> 
+    <para>Po spuštění hry <application>GNOME Tetravex</application> se otevře <interface>hlavní okno</interface>, které ukazuje <xref linkend="mainwindow-fig"/>. Okno je rozdělené na dvě části. Pravá strana obsahuje škatulku s kameny, které skládáte do škatulky v levé části tak, aby byly správně uspořádané.</para>
+
+     <figure id="mainwindow-fig">
+      <title>Hlavní okno GNOME Tetravex</title> 
+      <screenshot>
+        <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/gnotravex_mainwindow.png" format="PNG" srccredit="ME"/>
+  </imageobject>
+    <textobject> 
+      <phrase>Hlavní okno hry GNOME Tetravex.</phrase> 
+    </textobject> 
+  </mediaobject>
+      </screenshot> 
+     </figure>
+
+     <para>Hrát můžete začít ihned. Znovu začít hru můžete volbou <menuchoice><guisubmenu>Hra</guisubmenu><guimenuitem>Nová hra</guimenuitem></menuchoice> <xref linkend="playing-fig"/>.</para>
+      <figure id="playing-fig">
+       <title>Hra GNOME Tetravex.</title> 
+       <screenshot> 
+         <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/gnotravex_game.png" format="PNG" srccredit="ME"/>
+  </imageobject>
+    <textobject> 
+      <phrase>Průběh hry GNOME Tetravex.</phrase> 
+    </textobject> 
+  </mediaobject>
+       </screenshot>
+      </figure>
+     <para>Kameny jsou rozdělené na čtyři části a vy je musíte umístit tak, že na sebe vždy navzájem navazují dvě stejná čísla. Hra vám nedovolí umístit vedle sebe kameny, které by na sebe navazovaly různými čísly. Kameny umisťujete jejich přetahováním ze současných míst v pravé škatulce na nová místa. Tahy nejsou nevratné a můžete je lehce změnit. Kameny v levé škatulce můžete posouvat i všechny naráz pomocí příkazů <menuchoice><guisubmenu>Posunout</guisubmenu><guimenuitem>Doleva/Doprava/Nahoru/Dolů</guimenuitem></menuchoice>.</para>
+    </sect3>
+    <sect3 id="winning">
+     <title>Výhra</title> 
+     <para>Hra je u konce ve chvíli, kdy umístíte všechny kameny na správná místa. Když hru dokončíte a dosáhnete při tom dostatečně vysokého skóre, objeví se vaše hodnocení v tabulce nejlepších skóre. Pokud jste ale během hraní využili funkcí Rada nebo Vyřešit, do tabulky nejlepších skóre zařazeni nebudete.</para>
+    </sect3>
+
+  </sect2>
+ </sect1>
+	
+ <sect1 id="prefs"> 
+  <title>Přizpůsobení</title> 
+  <para>V nabídce <guimenuitem>Velikost</guimenuitem> můžete změnit velikost mřížky od dva krát dva do šest krát šest. Výchozí velikost je tři krát tři.</para>
+  <para>Pokud se vám zdají kameny příliš malé, stačí změnit velikost okna a tím se změní i velikost kamenů.</para>
+
+ </sect1>
+
+<!-- Do not try to be funny, it will only annoy users.  
+Use this section to manage user expectations if there are known problems like 
+slow animation.  Better to leave this section out than say something not 
+actually helpful.  
+
+ <sect1 id="bugs">
+  <title>Known Bugs and Limitations</title> 
+  <para> 
+    Of course not, its perfect!
+  </para> 
+ </sect1>
+-->
+
+ <sect1 id="authors"> 
+  <title>Autoři</title> 
+  <para>Hru <application>GNOME Tetravex</application> napsal Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). Tuto příručku napsal Rob Bradford (<email>rob@funky-penguin.co.uk</email>). Pokud chcete nahlásit chybu nebo podat návrh týkající se této aplikace nebo tohoto návodu, tak se řiďte instrukcemi v tomto <ulink url="ghelp:user-guide?feedback-bugs" type="help">dokumentu</ulink>.</para>
+
+  <!-- For translations: uncomment this:
+  <para>
+    Latin translation was done by ME (<email>MYNAME@MYADDRESS</email>). 
+    Please send all comments and suggestions regarding this translation to
+    SOMEWHERE.
+  </para>
+   -->
+
+ </sect1>
+
+ <sect1 id="license"> 
+  <title>Licence</title> 
+  <para>Tento program je svobodný software. Můžete jej dále šířit a/nebo upravovat za dodržení podmínek <ulink type="help" url="gnome-help:gpl"><citetitle>GNU General Public License</citetitle></ulink>, tak jak ji vydala Free Software Foundation ve verzi 2 nebo (dle vaší volby) novější.</para>
+  <para>Tento program je šířen s přesvědčením, že může být užitečný, ale BEZ JAKÝCHKOLIV ZÁRUK, bez předpokládané záruky na OBCHODOVATELNOST nebo VHODNOST PRO URČITÝ ÚČEL. Více podrobností najdete v <citetitle>GNU General Public License</citetitle>.</para>
+  <para>Kopie <citetitle>GNU General Public License</citetitle> je zahrnuta v dodatku <citetitle>Uživatelské přiručky GNOME</citetitle>. Kopii <citetitle>GNU General Public License</citetitle> můžete také získat od Free Software Foundation navštívením <ulink type="http" url="http://www.fsf.org">jejich webu</ulink> nebo zasláním žádosti na <address> Free Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</country></address></para> 
+ </sect1>
+</article>

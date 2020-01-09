@@ -1,0 +1,51 @@
+.\" Copyright (C) 2007 Sven Arvidsson <sa@whiz.se>
+.\"
+.\" This is free software; you may redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as
+.\" published by the Free Software Foundation; either version 2,
+.\" or (at your option) any later version.
+.\"
+.\" This is distributed in the hope that it will be useful, but
+.\" WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\"You should have received a copy of the GNU General Public License along
+.\"with this program; if not, write to the Free Software Foundation, Inc.,
+.\"51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+.TH same-gnome 6 "2007\-06\-09" "GNOME"
+.SH NAME
+Same-GNOME \- A puzzle game for GNOME
+.SH SYNOPSIS
+.B same-gnome
+.RI [ OPTION... ]
+.SH DESCRIPTION
+The goal is to remove as many objects as possible in as few moves as
+possible. Objects that are adjacent to each other get removed as a
+group. The remaining objects then collapse to fill in the gaps and new
+groups are formed. You cannot remove single objects.
+.SH OPTIONS
+.TP
+.B \-t, \-\-theme=NAME
+Set the theme
+.TP
+.B \-s, \-\-scenario=NAME
+For backwards compatibility
+.TP
+.B \-z, \-\-size=NUMBER
+Game size (1=small, 3=large)
+.P
+This program also accepts the standard GNOME and GTK options.
+.SH AUTHORS
+.B same-gnome
+was written by Callum McKenzie.
+.P
+This manual page was written by Sven Arvidsson <sa@whiz.se>,
+for the Debian project (but may be used by others).
+.SH SEE ALSO
+.BR "gtk-options" (7),
+.BR "gnome-options" (7)
+.P
+The online documentation available through the program's
+.I Help
+menu.

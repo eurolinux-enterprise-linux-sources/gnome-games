@@ -1,0 +1,135 @@
+.\"                                      Hey, EMACS: -*- nroff -*-
+.\" blackjack.6 is copyright 2007 by
+.\" Martin Ferrari <martin.ferrari@gmail.com>
+.\"
+.\" This is free documentation, see the latest version of the GNU Free
+.\" Documentation License for copying conditions. There is NO warranty.
+.\"
+.TH BLACKJACK 6 "March 22, 2007" "BlackJack"
+.\" Please adjust this date whenever revising the manpage.
+.\"
+
+.SH NAME
+BlackJack \- A multiple deck, casino rules blackjack game.
+
+.SH SYNOPSIS
+.B blackjack
+.RI [ options ]
+
+.SH DESCRIPTION
+This manual page documents briefly the
+.B blackjack
+command. For more information, please refer to the GNOME help for
+.B BlackJack
+
+.PP
+.B BlackJack
+is a multiple deck, casino rules blackjack game. The object of the game is to
+hold cards having a higher count than those of the dealer without going over
+21.  It is part of the
+.I gnome-games
+package.
+
+.SH OPTIONS
+BlackJack accepts the following options, besides the usual Gtk+/GNOME
+switches:
+.TP
+.B \-v, \-\-variation=NAME
+Blackjack rule set to use
+
+.SH USAGE
+This text is taken verbatim from the BlackJack Manual V2.8.
+
+.HP
+To Set the Wager
+
+To increase the wager for the hand, double click on the player chip, located
+along the lower edge of the playing area, that you wish to add to your wager.
+
+Or, drag the desired chip onto your wager stack, located next to your hand.
+      
+.HP
+To Deal a New Hand
+
+A new hand can be dealt when the table is clear or when play has finished
+on the current hands.
+
+To deal a new hand on a clear table, click in the white outlines that
+indicate the dealer or player positions.
+
+To deal a new hand after play has finished on the current hands, click
+once on any of the cards on the table.
+
+.HP
+To Add a Card to a Hand (Hit)
+
+You may add cards to a hand until the hand total is 21 or over.
+
+To add a card to a player's hand, click once on any card in the hand.
+
+.HP
+To Stop Taking Cards (Stand)
+
+You may stop taking cards at any time after the first two cards have been
+dealt.
+
+To stop adding cards to a hand, click once on any other hand.  For example,
+when there is only one player position (ie. you have not split a pair), click
+on the dealer's hand to stand.  When you have split a pair, you may stand on
+the first player hand by clicking on the second player hand, or the dealer
+hand.
+
+.HP
+To Double Down
+
+To double down, double click on any of the player chips after the first two
+cards have been dealt.
+
+.HP
+To Split Pairs
+
+To split a pair, drag the top card of the hand off the player position and drop
+on any empty space on the table.
+
+.HP
+To Surrender
+
+Not yet implemented.
+
+.HP
+Get a hint
+
+At any time you may ask the game for a hint.  To do this either click on the
+Hint button on the toolbar, or choose the
+.BR Game / Hint
+menu item.
+
+.HP
+Keyboard control
+
+Most of the operations in the game can be controlled from keyboard input:
+
+.RS
+.IP ENTER
+Deal new hand
+.IP H
+Hit / Add card
+.IP S
+Stand / Finish hand
+.IP D
+Double down
+.IP P
+Split hand
+.IP R
+Surrender hand
+.RE
+
+.SH HOMEPAGE
+http://www.gnome.org/projects/gnome-games/
+
+.SH AUTHOR
+This manual page was written by Martin Ferrari <martin.ferrari@gmail.com>,
+for the Debian system (but may be used by others).
+Blackjack was written by William Jon McCann <mccann@jhu.edu>.
+You can find more information about BlackJack in
+.IR /usr/share/doc/gnome-games .

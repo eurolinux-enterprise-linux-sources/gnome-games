@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.10">
+<!ENTITY date "June 2005">
+<!ENTITY app "<application>Tetravex</application>">
+<!ENTITY appname "Tetravex">
+<!ENTITY version "2.10">
+]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Feb 12, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="da">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+ <articleinfo>
+  <title>Manual for <application>Tetravex</application></title>
+
+    <abstract role="description">
+      <para>Tetravex er et simpelt puslespil, hvor brikker har numre på hver side. Brikkerne skal, på tid, placeres så at de sider af brikkerne der rører hinanden har ens numre. Tiderne gemmes så i en fælles pointtavle.</para>
+    </abstract>
+
+  <copyright>
+   <year>2001</year>
+   <holder>Rob Bradford</holder>
+  </copyright><copyright><year>2009.</year><holder>Joe Hansen (joedalton2@yahoo.dk)</holder></copyright>
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername>GNOME-dokumentationprojekt</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Tilladelse er givet til at kopiere, distribuere og/eller ændre dette dokument under betingelserne i GNU Free Documentation License (GFDL), version 1.1 eller enhver senere version udgivet af Free Software Foundation; uden invariante afsnit, forsidetekster, samt bagsidetekster. Du kan se en kopi af GFDL her <ulink type="help" url="ghelp:fdl">link</ulink> eller i filen COPYING-DOCS som distribueres sammen med denne manual.</para>
+         <para>Denne manual er en del af den samling af GNOME-manualer som udgives under GFDL. Hvis du ønsker at distribuere denne manuel adskilt fra samlingen, kan du gøre dette ved at tilføje en kopi af licensen til manualen, som beskrevet i afsnit 6 af licensen.</para>
+
+	<para>En stor del af de navne som anvendes af firmaer til at identificere deres produkter og tjenester hævdes som værende varemærker. Hvor disse navne fremgår i en hvilken som helst GNOME-dokumentation, og medlemmerne af GNOME-dokumentationsprojeket er gjort opmærksom på disse varemærker, så er disse navne vist med store bogstaver eller stort begyndelsesbogstav.</para>
+
+	<para>DOKUMENTET OG ÆNDREDE VERSIONER AF DOKUMENTET STILLES TIL RÅDIGHED UNDER GNU FREE DOCOMENTATION LICENSE MED FØLGENDE BETINGELSER: <orderedlist>
+		<listitem>
+		  <para>DETTE DOKUMENT GØRES TILGÆNGELIGT SÅDAN SOM DET ER, UDEN NOGEN FORM FOR GARANTI, HVERKEN UDTALT ELLER ANTYDET, DERIBLANDT, UDEN BEGRÆNSNINGER, GARANTIER OM AT DOKUMENTET ELLER ÆNDREDE VERSIONER AF DOKUMENTET ER FRIT FOR DEFEKTER, PASSENDE TIL ET BESTEMT FORMÅL ELLER IKKE-KRÆNKENDE. DU HÆFTER SELV FOR HELE RISIKOEN VEDRØRENDE KVALITET, KORREKTHED OG YDELSE FOR DOKUMENTET ELLER ÆNDREDE VERSIONER AF DOKUMENTET. SKULLE ET DOKUMENT, ELLER EN ÆNDRET VERSION AF ET DOKUMENT VISE SIG AT VÆRE DEFEKT PÅ EN HVILKEN SOM HELST MÅDE, HÆFTER DU FOR BETALING FOR EVENTUEL NØDVENDIG SERVICE, REPARATION ELLER KORREKTION (OG IKKE HVERKEN DEN OPRINDELIGE FORFATTER, SKRIBENT ELLER NOGEN ANDEN BIDRAGYDER). DENNE ERKLÆRING OM GARANTIFORBEHOLD ER EN ESSENTIEL DEL AF DENNE LICENS. INGEN BRUG AF NOGET DOKUMENT ELLER ÆNDRET VERSION AF DOKUMENTET ER AUTORISERET HERUNDER BORTSET FRA DENNE ANSVARSFRASKRIVELSE OG</para>
+		</listitem>
+		<listitem>
+		  <para>UNDER INGEN OMSTÆNDIGHEDER OG UNDER INGEN JURIDISK TEORI, UANSET OM DET ER EN BEVIDST SKADENDE HANDLING (INKLUSIVE UFORSVARLIGHED) ELLER PÅ HVILKEN SOM HELST ANDEN MÅDE, KAN FORFATTEREN, SKRIBENT, BIDRAGYDERE, DISTRIBUTØRER ELLER FORSYNER AF DETTE DOKUMENT ELLER MODIFICEREDE VERSIONER GØRES ANSVARLIG OVERFOR NOGEN PERSON FOR NOGEN DIREKTE, INDIREKTE, SPECIEL, TILFÆLDIG ELLER FØLGENDE SKADE PÅFØRT NOGEN INKLUSIVE, UDEN BEGRÆNSNING, SKADE SOM FØLGE AF TAB AF RYGTE, ARBEJDSSTOP, COMPUTERFEJL ELLER -SVIGT, ELLER ENHVER ANDEN FORM FOR SKADE ELLER TAB SOM ER OPSTÅET I FORBINDELSE MED BRUG AF DETTE DOKUMENT ELLER MODIFICEREDE VERSIONER HERAF, SELV HVIS EN SÅDAN PART HAR VÆRET INFORMERET OM MULIGHEDEN FOR SÅDANNE SKADER.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+
+    <authorgroup> 
+      <author role="maintainer"> 
+	<firstname>Rob</firstname> 
+	<surname>Bradford</surname> 
+	<affiliation> 
+	  <address> <email>robster@debian.org</email> </address> 
+	</affiliation> 
+      </author> 
+<!-- This is appropriate place for other contributors: translators,
+      maintainers,  etc. Commented out by default.
+       <othercredit role="translator">
+	<firstname>Latin</firstname> 
+	<surname>Translator 1</surname> 
+	<affiliation> 
+	  <orgname>Latin Translation Team</orgname> 
+	  <address> <email>translator@gnome.org</email> </address> 
+	</affiliation>
+	<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review"/>
+
+    <revhistory>
+      <revision> 
+	<revnumber>Tetravexmanual version 2.10</revnumber> 
+	<date>June 2005</date> 
+	<revdescription> 
+	  <para role="author">Rob Bradford <email>rob@funky-penguin.co.uk</email></para>
+	  <para role="publisher">GNOME-dokumentationprojekt</para>
+	</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Denne manual beskriver version 2.12 af Tetravex.</releaseinfo>
+    <!-- The following feedback information only applies to appliactions
+    listed in bugzilla.gnome.org and bugzilla.ximian.com. For other
+    applications, please provide your own feedback info or remove thsi
+    section altogether -->
+    <legalnotice> 
+      <title>Tilbagemeldinger</title> 
+      <para>Hvis du ønsker at indrapportere en fejl eller komme med et forslag vedrørende <application>Tetravex</application> eller denne manual så følg vejledningen på siden <ulink url="ghelp:user-guide?feedback-bugs" type="help">tilbagemeldinger omkring GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+ </articleinfo>
+
+  <indexterm zone="index"> 
+    <primary>GNOME Tetravex</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+ <sect1 id="intro">
+  <title>Introduktion</title>
+
+  <para><application>GNOME Tetravex</application> er et simpelt puslespil hvor brikker har numre på hver side. Brikkerne skal, på tid, placeres så at de sider af brikkerne der rører hinanden har ens numre. Tiderne gemmes så i en fælles pointtavle.</para>
+    
+  <para> 
+    To run <application>GNOME Tetravex</application>, select
+    <menuchoice>
+     <guisubmenu>Games</guisubmenu> 
+     <guimenuitem>Tetravex</guimenuitem>
+    </menuchoice>
+    from the <guimenu>Main Menu</guimenu>, or type 
+    <command>gnotravex</command> on the command line.
+  </para>
+
+  <para><application>GNOME Tetravex</application> er inkluderet i pakken <filename>gnome-games</filename>, som er en del af skrivebordsmiljøet GNOME. Dette dokument beskriver version 2.10 af <application>GNOME Tetravex</application>.</para>
+ </sect1>
+
+ <sect1 id="usage"> 
+  <title>Spillet GNOME Tetravex</title>
+
+  <para><application>GNOME Tetravex</application> er et simpelt puslespil, dette afsnit viser dig hvordan du kommer i gang.</para>
+
+  <sect2 id="mainwin">
+   <title>Grundlæggende brug</title>
+   <sect3 id="playing">
+    <title>Spillet</title> 
+    <para>Kørslen af <application>GNOME Tetravex</application> åbner <interface>Hovedvinduet</interface>, vist i <xref linkend="mainwindow-fig"/>. Vinduet er opdelt i to bokse. Højre side indeholder en boks med brikker som du skal placere og venstre side er stedet hvor du placerer brikkerne.</para>
+
+     <figure id="mainwindow-fig">
+      <title>Hovedvindue for GNOME Tetravex</title> 
+      <screenshot>
+        <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/gnotravex_mainwindow.png" format="PNG" srccredit="ME"/>
+  </imageobject>
+    <textobject> 
+      <phrase>Hovedvindue for GNOME Tetravex.</phrase> 
+    </textobject> 
+  </mediaobject>
+      </screenshot> 
+     </figure>
+
+     <para>Du kan starte spillet med det samme. Du kan genstarte spille ved at vælge <menuchoice><guisubmenu>Fil</guisubmenu><guimenuitem>Nyt spil</guimenuitem></menuchoice><xref linkend="playing-fig"/></para>
+      <figure id="playing-fig">
+       <title>Et GNOME Tetravex spil</title> 
+       <screenshot> 
+         <mediaobject> 
+    <imageobject>
+  <imagedata fileref="figures/gnotravex_game.png" format="PNG" srccredit="ME"/>
+  </imageobject>
+    <textobject> 
+      <phrase>Et GNOME Tetravex spil.</phrase> 
+    </textobject> 
+  </mediaobject>
+       </screenshot>
+      </figure>
+     <para>Brikkerne er delt i fire dele, du skal placere dem så kun to ens numre placeres ved siden af hinanden. Spillet vil ikke tillade dig, at placere brikkerne så forskellige numre er over for hinanden. Du placerer brikkerne ved at trække dem fra deres nuværende placering, enten i den højre boks eller i hovedboksen, til deres nye position. Disse flytninger er ikke permanente og kan nemt gøres om. Du kan også, på en gang, flytte alle brikkerne over i den venstre boks ved at bruge kommandoerne: <menuchoice><guisubmenu>Flyt</guisubmenu><guimenuitem>Venstre/Højre/Op/Ned</guimenuitem></menuchoice></para>
+    </sect3>
+    <sect3 id="winning">
+     <title>Sejr i spillet</title> 
+     <para>Spillet er færdigt, når du har placeret alle firkanterne i den korrekte position. Når du har færdiggjort spillet, vises din placering på pointtavlen, hvis din pointindsamling har været stor nok. Hvis du har brugt enten Fif eller Løs, så vil din pointindsamling ikke blive inkluderet på pointtavlen.</para>
+    </sect3>
+
+  </sect2>
+ </sect1>
+	
+ <sect1 id="prefs"> 
+  <title>Tilpasning</title> 
+  <para> 
+    Under the <guimenuitem>Size</guimenuitem> menu you can change the size of the grid from two
+  by two up to six by six. The default is three by three. 
+  </para>
+  <para>Hvis brikkerne er for små, vil en ændring af vinduestørrelsen ændre størrelsen på brikkerne.</para>
+
+ </sect1>
+
+<!-- Do not try to be funny, it will only annoy users.  
+Use this section to manage user expectations if there are known problems like 
+slow animation.  Better to leave this section out than say something not 
+actually helpful.  
+
+ <sect1 id="bugs">
+  <title>Known Bugs and Limitations</title> 
+  <para> 
+    Of course not, its perfect!
+  </para> 
+ </sect1>
+-->
+
+ <sect1 id="authors"> 
+  <title>Forfattere</title> 
+  <para><application>GNOME Tetravex</application> er programmeret af Lars Rydlinge (<email>lars.rydlinge@hig.se</email>). Denne manual er skrevet af Rob Bradford (<email>rob@funky-penguin.co.uk</email>). For at indrapportere en fejl, eller komme med et forslag vedrørende dette program eller denne manual, så følg vejledningen i dette <ulink url="ghelp:user-guide?feedback-bugs" type="help">dokument</ulink>.</para>
+
+  <!-- For translations: uncomment this:
+  <para>
+    Latin translation was done by ME (<email>MYNAME@MYADDRESS</email>). 
+    Please send all comments and suggestions regarding this translation to
+    SOMEWHERE.
+  </para>
+   -->
+
+ </sect1>
+
+ <sect1 id="license"> 
+  <title>Licens</title> 
+  <para>Dette program er frit software: du kan distribuere den og/eller ændre den under betingelserne i <citetitle>GNU General Public License</citetitle> der udgives af Free Software Foundation; enten version 2 eller (ved dit valg) enhver senere version.</para>
+  <para>Dette program distribueres i håb om, at det vil vise sig nyttigt, men
+UDEN NOGEN FORM FOR GARANTI, uden selv de underforståede garantier
+omkring SALGBARHED eller EGNETHED TIL ET BESTEMT FORMÅL. Yderligere
+detaljer kan læses i <citetitle>GNU General Public License</citetitle>.</para>
+  <para>En kopi af <citetitle>GNU General Public License</citetitle> er inkluderet som et tillæg til <citetitle>GNOME-brugervejledningen</citetitle>. Du kan også få en kopi af <citetitle>GNU General Public License</citetitle> fra Free Software Foundtation ved at besøge <ulink url="http://www.fsf.org" type="http">deres internetside</ulink> eller skrive til <address> Free Software Foundation, Inc. <street>59 Temple Place</street> - Suite 330 <city>Boston</city>, <state>MA</state><postcode>02111-1307</postcode><country>USA</country></address></para> 
+ </sect1>
+</article>

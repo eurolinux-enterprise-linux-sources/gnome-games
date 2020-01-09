@@ -1,0 +1,680 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+<!ENTITY appversion "2.12">
+<!ENTITY manrevision "2.8">
+<!ENTITY date "September 2004">
+<!ENTITY app "<application>Blackjack</application>">
+<!ENTITY appname "Blackjack">
+<!-- Information about the entities
+       The legal.xml file contains legal information, there is no need to edit the file. 
+       Use the appversion entity to specify the version of the application.
+       Use the manrevision entity to specify the revision number of this manual.
+       Use the date entity to specify the release date of this manual.
+       Use the app entity to specify the name of the application. -->]>
+<!-- 
+      (Do not remove this comment block.)
+  Maintained by the GNOME Documentation Project
+  http://developer.gnome.org/projects/gdp
+  Template version: 2.0 beta
+  Template last modified Apr 11, 2002
+-->
+<!-- =============Document Header ============================= -->
+<article id="index" lang="cs">
+<!-- please do not change the id; for translations, change lang to -->
+<!-- appropriate code -->
+  <articleinfo> 
+    <title>Příručka ke hře <application>Blackjack</application></title>       
+    <abstract role="description">
+      <para>Blackjack je hra typu blackjack z Projektu GNOME s více balíčky karet podle pravidel kasína. Cílem hry je dostat do ruky karty jejichž hodnota je vyšší než rozdávajícího, ale zároveň nesmí překročit 21. Hráč sází virtuální žetony.</para>
+    </abstract>
+
+    <copyright> 
+      <year>2003</year> 
+      <holder>William Jon McCann</holder> 
+    </copyright><copyright><year>2009.</year><holder>Marek Černocký (marek@manet.cz)</holder></copyright> 
+
+<!-- translators: uncomment this:
+
+  <copyright>
+   <year>2002</year>
+   <holder>ME-THE-TRANSLATOR (Latin translation)</holder>
+  </copyright>
+
+   -->
+<!-- An address can be added to the publisher information.  If a role is 
+     not specified, the publisher/author is the same for all versions of the 
+     document.  -->
+    <publisher> 
+      <publishername>Dokumentační projekt GNOME</publishername> 
+    </publisher> 
+
+     <legalnotice id="legalnotice">
+	<para>Je povoleno kopírovat, šířit a/nebo upravovat tento dokument za podmínek GNU Free Documentation License, verze 1.1 nebo jakékoli další verze vydané nadací Free Software Foundation; bez neměnných oddílů, bez textů předních desek a bez textů zadních desek. Kopie této licence je zahrnuta v oddílu jménem <ulink type="help" url="ghelp:fdl">GNU Free Documentation License</ulink> nebo v souboru COPYING-DOCS dodávaném s touto příručkou.</para>
+         <para>Tato příručka je součástí kolekce příruček GNOME, distribuovaných pod licencí GNU FDL. Pokud chcete tento dokument šířit odděleně od kolekce, musíte přiložit kopii licence dle popisu v sekci 6 dané licence.</para>
+
+	<para>Mnoho užívaných jmen určených k zviditelnění produktů nebo služeb jsou ochranné známky. Na místech, kde jsou tato jména v dokumentaci užita a členové Dokumentačního projektu GNOME jsou si vědomi skutečnosti, že se jedná o ochrannou známku, je takové jméno psáno velkými písmeny celé nebo s velkým písmenem na začátku.</para>
+
+	<para>DOKUMENT A JEHO UPRAVENÉ VERZE JSOU ŠÍŘENY V SOULADU SE ZNĚNÍM LICENCE GNU FREE DOCUMENTATION LICENSE S NÁSLEDUJÍCÍM USTANOVENÍM: <orderedlist>
+		<listitem>
+		  <para>DOKUMENT JE POSKYTOVÁN V PODOBĚ „JAK JE“ BEZ ZÁRUKY V JAKÉKOLIV PODOBĚ, NEPOSKYTUJÍ SE ANI ODVOZENÉ ZÁRUKY, ZÁRUKY, ŽE DOKUMENT, NEBO JEHO UPRAVENÁ VERZE, JE BEZCHYBNÝ NEBO ZÁRUKY PRODEJNOSTI, VHODNOSTI PRO URČITÝ ÚČEL NEBO NEPORUŠENOSTI. RIZIKO NEKVALITY, NEPŘESNOSTI A ŠPATNÉHO PROVEDENÍ DOKUMENTU, NEBO JEHO UPRAVENÉ VERZE, LEŽÍ NA VÁS. POKUD KVŮLI TOMUTO DOKUMENTU, NEBO JEHO UPRAVENÉ VERZI, NASTANE PROBLÉM, VY (NIKOLIV PŮVODNÍ AUTOR NEBO JAKÝKOLIV PŘISPĚVATEL) PŘEBÍRÁTE JAKÉKOLIV NÁKLADY ZA NUTNÉ ÚPRAVY, OPRAVY ČI SLUŽBY. TOTO PROHLÁŠENÍ O ZÁRUCE PŘEDSTAVUJE ZÁKLADNÍ SOUČÁST TÉTO LICENCE. BEZ TOHOTO PROHLÁŠENÍ NENÍ, PODLE TÉTO DOHODY, POVOLENO UŽÍVÁNÍ ANI ÚPRAVY TOHOTO DOKUMENTU; DÁLE</para>
+		</listitem>
+		<listitem>
+		  <para>ZA ŽÁDNÝCH OKOLNOSTÍ A ŽÁDNÝCH PRÁVNÍCH PŘEDPOKLADŮ, AŤ SE JEDNÁ O PŘEČIN (VČETNĚ NEDBALOSTNÍCH), SMLOUVU NEBO JINÉ, NENÍ AUTOR, PŮVODNÍ PISATEL, KTERÝKOLIV PŘISPĚVATEL NEBO KTERÝKOLIV DISTRIBUTOR TOHOTO DOKUMENTU NEBO UPRAVENÉ VERZE DOKUMENTU NEBO KTERÝKOLIV DODAVATEL NĚKTERÉ Z TĚCHTO STRAN ODPOVĚDNÝ NĚJAKÉ OSOBĚ ZA PŘÍMÉ, NEPŘÍMÉ, SPECIÁLNÍ, NAHODILÉ NEBO NÁSLEDNÉ ŠKODY JAKÉHOKOLIV CHARAKTERU, VČETNĚ, ALE NEJEN, ZA POŠKOZENÍ ZE ZTRÁTY DOBRÉHO JMÉNA, PŘERUŠENÍ PRÁCE, PORUCHY NEBO NESPRÁVNÉ FUNKCE POČÍTAČE NEBO JINÉHO A VŠECH DALŠÍCH ŠKOD NEBO ZTRÁT VYVSTÁVAJÍCÍCH Z NEBO VZTAHUJÍCÍCH SE K POUŽÍVÁNÍ TOHOTO DOKUMENTU NEBO UPRAVENÝCH VERZÍ DOKUMENTU, I KDYŽ BY TAKOVÁTO STRANA BYLA INFORMOVANÁ O MOŽNOSTI TAKOVÉHOTO POŠKOZENÍ.</para>
+		</listitem>
+	  </orderedlist></para>
+  </legalnotice>
+
+
+   <!-- This file  contains link to license for the documentation (GNU FDL), and 
+        other legal stuff such as "NO WARRANTY" statement. Please do not change 
+	any of this. -->
+
+    <authorgroup> 
+      <author role="maintainer">
+		<firstname>William Jon</firstname> 
+		<surname>McCann</surname> 
+		<affiliation> 
+	  		<orgname/> 
+	  		<address> <email>mccann@jhu.edu</email> </address> 
+		</affiliation> 
+      </author> 
+      
+<!-- This is appropriate place for other contributors: translators,
+     maintainers,  etc. Commented out by default.
+     
+      <othercredit role="translator">
+		<firstname>Latin</firstname> 
+		<surname>Translator 1</surname> 
+		<affiliation> 
+	  		<orgname>Latin Translation Team</orgname> 
+	  		<address> <email>translator@gnome.org</email> </address> 
+		</affiliation>
+		<contrib>Latin translation</contrib>
+      </othercredit>
+-->
+    </authorgroup>
+	
+	<releaseinfo revision="2.26" role="review"/>	
+
+
+<!-- According to GNU FDL, revision history is mandatory if you are -->
+<!-- modifying/reusing someone else's document.  If not, you can omit it. -->
+<!-- Remember to remove the &manrevision; entity from the revision entries other
+-->
+<!-- than the current revision. -->
+<!-- The revision numbering system for GNOME manuals is as follows: -->
+<!-- * the revision number consists of two components -->
+<!-- * the first component of the revision number reflects the release version of the GNOME desktop. -->
+<!-- * the second component of the revision number is a decimal unit that is incremented with each revision of the manual. -->
+<!-- For example, if the GNOME desktop release is V2.x, the first version of the manual that -->
+<!-- is written in that desktop timeframe is V2.0, the second version of the manual is V2.1, etc. -->
+<!-- When the desktop release version changes to V3.x, the revision number of the manual changes -->
+<!-- to V3.0, and so on. -->  
+    <revhistory>
+      <revision> 
+		<revnumber>Příručka V2.8 ke hře Blackjack</revnumber> 
+		<date>Září 2004</date> 
+		<revdescription> 
+	  		<para role="author">William Jon McCann <email>mccann@jhu.edu</email></para>
+	  		<para role="publisher"/>
+		</revdescription> 
+      </revision> 
+    </revhistory> 
+
+    <releaseinfo>Tato příručka popisuje Blackjack ve verzi 2.12.</releaseinfo> 
+    <legalnotice> 
+      <title>Ohlasy</title> 
+      <para>Pokud chcete oznámit chybu nebo navrhnout vylepšení vztahující se k aplikaci <application>Blackjack</application> nebo této příručce, postupujte dle instrukcí na stránce <ulink url="ghelp:user-guide?feedback-bugs" type="help">Stránka s ohlasy na GNOME</ulink>.</para>
+<!-- Translators may also add here feedback address for translations -->
+    </legalnotice> 
+  </articleinfo> 
+
+  <indexterm zone="index"> 
+    <primary>Blackjack</primary> 
+  </indexterm> 
+  <indexterm zone="index"> 
+    <primary>mygnomeapp</primary> 
+  </indexterm>
+
+<!-- ============= Document Body ============================= -->
+<!-- ============= Introduction ============================== -->
+<!-- Use the Introduction section to give a brief overview of what
+     the application is and what it does. -->
+  <sect1 id="blackjack-introduction"> 
+
+    <title>Úvod</title> 
+
+    <para><application>Blackjack</application> je hra typu blackjack s více balíčky karet podle pravidel kasína. Cílem hry je dostat do ruky karty, jejichž hodnota je vyšší než rozdávajícího, ale zároveň nesmí překročit 21.</para>
+  </sect1>
+
+  <sect1 id="blackjack-basics">
+    <title>Základy hry blackjack</title>
+
+    <sect2 id="blackjack-terms">
+    <title>Terminologie hry blackjack</title>
+    <para>Zde je několik důležitých výrazů používaných při hře.</para>
+    <para>
+        <variablelist>
+	<varlistentry>
+	<term>Blackjack</term>
+	<listitem>
+	<para>Případ, kdy první dvě rozdané karty dělají 21. Okamžitá výhra je ve výši 150% vaší sázky.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Bust</term>
+	<listitem>
+	<para>Nastává, když hodnota vašich karet překročí 21. Tím jste prohráli.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Double down (zdvojnásobení sázky)</term>
+	<listitem>
+	<para>Zdvojnásobení úvodní sázky, po kterém dostanete přesně jednu další kartu.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Hit (vzít)</term>
+	<listitem>
+	<para>Žádost na rozdávajícího o další kartu.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Insurance (pojištění)</term>
+	<listitem>
+	<para>Postranní sázka ve výši 50% původní částky na to, že rozdávající má přirozených 21 (neboli blackjack) se nabízí v případě, kdy otočená karta rozdávajícího je eso. Pokud má rozdávající přirozených 21, dostane hráč vyplacený dvojnásobek pojistky.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Push</term>
+	<listitem>
+	<para>Nastává, když hodnota karet hráče i rozdávajícího je stejná. Hráči je vrácena jeho původní sázka.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Split (rozdělit)</term>
+	<listitem>
+	<para>Když začnete se dvěma kartami, které mají stejnou hodnotu, můžete je rozdělit na dvě nezávislé hry.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Stand (stát)</term>
+	<listitem>
+	<para>Znamená, že zastavujete braní dalších karet.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Surrender (vzdát)</term>
+	<listitem>
+        <para>Znamená, že hru pokládáte a dostanete zpět polovinu své sázky.</para>
+	</listitem>
+	</varlistentry>
+
+        </variablelist>
+    </para>
+    </sect2>
+
+    <sect2 id="blackjack-card-values">
+    <title>Hodnoty karet</title>
+    <para>Ve hře blackjack má každá karta přiřazenou hodnotu. <itemizedlist> 
+	  <listitem> 
+           <para>Eso (A - ace) můžete počítat buď jako 1 nebo jako 11.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>Karty 2 až 10 mají hodnotu podle svého čísla.</para>
+	  </listitem> 
+	  <listitem> 
+           <para>Kluk (J - jack), královna (Q - queen) a král (K - king) mají každý hodnotu 10.</para>
+	  </listitem> 
+	</itemizedlist></para> 
+
+    <para>Hodnota karet, které máte, je součtem hodnot jednotlivých karet.</para>
+    </sect2>
+
+    <sect2 id="blackjack-dealer-rules">
+    <title>Pravidla pro rozdávajícího</title>
+    <para>Rozdávající musí pro své karty dodržovat určitá specifická pravidla. Existují dvě základní pravidla říkající, co musí rozdávající dělat v závislosti na součtu svých karet. <variablelist>
+	<varlistentry>
+	<term>Rozdávající stojí na 17</term>
+	<listitem>
+	<para>Dokud má rozdávající součet pod 17, musí pokračovat v braní karet (hit). V okamžiku kdy má 17 a výše, stojí (stand).</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Rozdávající bere při soft 17</term>
+	<listitem>
+	<para>Dokud má rozdávající součet pod 17, musí pokračovat v braní karet (hit). V okamžiku kdy má 17 a výše, stojí (stand). Výjimkou je případ, kdy má soft 17 (eso a šestku), potom musí vzít další kartu. Jedná se o případ soft počítání, kdy má eso hodnotu 11.</para>
+	</listitem>
+	</varlistentry>
+        </variablelist></para>
+    </sect2>
+
+  </sect1>
+
+<!-- =========== Getting Started ============================== -->
+<!-- Use the Getting Started section to describe the steps required
+     to start the application and to describe the user interface components
+     of the application. If there is other information that it is important
+     for readers to know before they start using the application, you should
+     also include this information here. 
+     If the information about how to get started is very short, you can 
+     include it in the Introduction and omit this section. -->
+
+  <sect1 id="blackjack-getting-started"> 
+    <title>Začínáme</title> 
+
+    <sect2 id="blackjack-start">
+    <title>Spuštění hry <application>Blackjack</application></title>
+    <para>Hru <application>Blackjack</application> můžete spustit následujícími dvěma způsoby:</para> 
+    <variablelist>
+    	<varlistentry>
+    		<term>Nabídka <guimenu>Aplikace</guimenu></term>
+    		<listitem>
+    		<para>Zvolte <menuchoice><guisubmenu>Hry</guisubmenu><guimenuitem>Blackjack</guimenuitem></menuchoice>.</para>
+    		</listitem>
+    	</varlistentry>
+    	<varlistentry>
+    		<term>Příkazový řádek</term>
+    		<listitem>
+    		<para>Pokud chcete spustit hru <application>Blackjack</application> z příkazové řádky, zadejte následující příkaz a stiskněte klávesu <keycap>Return</keycap>:</para>
+    		<para> 
+			<command>blackjack</command> 
+    		</para> 
+    		</listitem>
+    	</varlistentry>
+    </variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-when-start">
+    <title>Když spustíte hru <application>Blackjack</application></title>
+    <para>Po spuštění hry <application>Blackjack</application> se zobrazí následující okno.</para>
+
+    <!-- ==== Figure ==== -->
+      <figure id="mainwindow-fig"> 
+	<title>Okno hry <application>Blackjack</application> po spuštění</title> 
+	<screenshot> 
+	  <mediaobject> 
+	    <imageobject><imagedata fileref="figures/blackjack_start_window.png" format="PNG"/> 
+	    </imageobject>
+	    <!-- EPS versions of the figures are not required at the moment. -->
+            <!-- 
+		    <imageobject>
+      		<imagedata fileref="figures/image.eps" format="EPS"/>
+    		    </imageobject>
+	    -->
+	    <textobject> 
+	      <phrase>Ukazuje <application>Blackjack</application> hlavní okno. Obsahuje titulek, panel nabídek, panel nástrojů, hrací plochu a stavový řádek. Panel nabídek obsahuje nabídky Hra, Nastavení a Nápověda.</phrase> 
+	    </textobject> 
+	  </mediaobject> 
+	</screenshot> 
+      </figure>
+    <!-- ==== End of Figure ==== -->
+
+    <!-- Include any descriptions of the GUI immediately after the screenshot of the main UI, -->
+    <!-- for example, the items on the menubar and on the toolbar. This section is optional. -->
+
+    <para>Okno aplikace <application>Blackjack</application> obsahuje následující části:</para>
+      <variablelist>
+
+	<varlistentry>
+	<term>Panel nabídek</term>
+	<listitem>
+	<para>Nabídky v panelu nabídek obsahují všechny funkce, které potřebujete pro používání aplikace <application>Blackjack</application>.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Panel nástrojů</term>
+	<listitem>
+	<para>Panel nástrojů obsahuje nejpoužívanější příkazy, které normálně můžete najít v panelu nabídek.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Stavový řádek</term>
+	<listitem>
+	<para>Stavový řádek obsahuje informace o průběhu současné hry <application>Blackjacku</application> a kontextové informace k položkám nabídek.</para>
+	</listitem>
+	</varlistentry>
+
+	<varlistentry>
+	<term>Hrací plocha</term>
+	<listitem>
+	<para>Hrací plocha obsahuje místo rozdávajícího, místo hráče, hráčovu sázku a hráčovy žetony.</para>
+	</listitem>
+	</varlistentry>
+
+	</variablelist>
+    </sect2>
+
+    <sect2 id="blackjack-menus">
+    <title>Nabídky hry <application>Blackjack</application></title>
+      <para>Panel nabídek, který se nachází nad <interface>hracím stolem</interface>, obsahuje následující nabídky:</para>
+
+      <variablelist>
+
+        <!-- ===== Game ===== -->
+
+        <varlistentry>
+          <term><guimenu>Hra</guimenu></term>
+          <listitem>
+            <para>Tato nabídka obsahuje tyto položky: <itemizedlist>
+                <listitem>
+                  <para><menuchoice><shortcut><keysym>Ctrl-N</keysym></shortcut><guimenuitem>Nová</guimenuitem></menuchoice> — Uklidí stůl a začne novou hru.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><guimenuitem>Restartovat</guimenuitem></menuchoice> — Uklidí stůl a znovu začne stejnou hru.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><guimenuitem>Rada</guimenuitem></menuchoice> — Sdělí vám, co počítač považuje za nejlepší možnost pro váš tah.</para>
+                </listitem>
+
+                <listitem>
+                  <para><menuchoice><shortcut><keysym>Ctrl-Q</keysym></shortcut><guimenuitem>Ukončit</guimenuitem></menuchoice> — Ukončí aplikaci.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Settings ===== -->
+
+        <varlistentry>
+          <term><guimenu>Nastavení</guimenu></term>
+          <listitem>
+            <para>Tato nabídka obsahuje tyto položky: <itemizedlist>
+
+                <listitem>
+                  <para><guimenuitem>Panel nástrojů</guimenuitem> — Přepíná zobrazení/skrytí panelu nástrojů.</para>
+                </listitem>
+
+                <listitem>
+                  <para><guimenuitem>Předvolby</guimenuitem> — Otevře dialogové okno <interface>Předvolby BlackJacku</interface>, ve kterém můžete změnit nastavení hry.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+        <!-- ===== Help ===== -->
+
+        <varlistentry>
+          <term><guimenu>Nápověda</guimenu></term>
+          <listitem>
+            <para>Tato nabídka obsahuje: <itemizedlist>
+
+                <listitem>
+                  <para><guimenuitem>Obsah</guimenuitem> — Otevře prohlížeč nápovědy a zobrazí tuto příručku.</para>
+                </listitem>
+
+                <listitem>
+                  <para><guimenuitem>O aplikaci</guimenuitem> — Otevře dialogové okno <interface>O aplikaci</interface>, které zobrazuje základní informace o hře <application>Blackjack</application>, jako je číslo její verze a jména autorů.</para>
+                </listitem>
+
+              </itemizedlist></para>
+          </listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+    <sect2 id="blackjack-playing-area">
+    <title>Hrací plocha <application>Blackjacku</application></title>
+      <para>Hrací plocha (nebo též stůl) se nachází pod <interface>panelem nástrojů</interface> a obsahuje následující části:</para>
+
+      <variablelist>
+
+        <varlistentry>
+          <term><interface>Místo rozdávajícího</interface></term>
+          <listitem><para>Na tomto místě jsou položené karty, které má rozdávající. Nachází se v horní části hrací plochy. Na prázdném stole má podobu bíle orámovaného oblasti.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Místo hráče</interface></term>
+          <listitem><para>Na tomto místě jsou položené karty, které má hráč. Na začátku je toto místo pouze jedno. Pokud hráč provede rozdělení (split), tak se vytvoří další. Na prázdném stole má podobu bíle orámované oblasti pod místem rozdávajícího.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Hráčova sázka</interface></term>
+          <listitem><para>Sloupce žetonů se sázkou představuje úvodní sázku na každé karty. Má podobu sloupce žetonů umístěného po levé straně každého hráčova místa.</para></listitem>
+        </varlistentry>
+
+        <varlistentry>
+          <term><interface>Hráčovy žetony</interface></term>
+          <listitem><para>Hráčovy žetony představují nekonečné sloupce žetonů v hodnotách 100, 25, 5 a 1. Tyto žetony se používají k upravení sázky.</para></listitem>
+        </varlistentry>
+
+      </variablelist>
+
+    </sect2>
+
+  </sect1>
+
+<!-- ================ Usage ================================ -->
+<!-- Use this section to describe how to use the application to perform the tasks for 
+  which the application is designed. -->
+  <sect1 id="blackjack-usage"> 
+    <title>Použití</title> 
+    <para>
+      <itemizedlist> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-set-wager"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-deal"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-hit"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-stand"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-double-down"/></para> 
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-split"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-surrender"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-get-hint"/></para>
+	</listitem> 
+	<listitem> 
+	  <para> 
+	    <xref linkend="blackjack-usage-keyboard-control"/></para>
+	</listitem> 
+      </itemizedlist> </para>
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-set-wager"> 
+      <title>Nastavení sázky</title> 
+      <para>Zvýšit sázku na své karty můžete takto: <itemizedlist>
+        <listitem>
+         <para>Dvojitě klikněte na hráčův žeton, umístěný podél dolní hrany hrací plochy, který chcete přidat k sázce.</para>
+        </listitem>
+        <listitem>
+         <para>Nebo přetáhněte požadovaný žeton na svůj sloupec žetonů se sázkou, který leží vedle vašich karet.</para>
+        </listitem>
+      </itemizedlist></para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-deal"> 
+      <title>Rozdání nových karet</title> 
+      <para>Nové karty se mohou rozdávat pokud je stůl prázdný nebo hráč skončil se současnými kartami.</para>
+      <para>Pokud chcete rozdat nové karty na prázdný stůl, klikněte na bílý obrys, který určuje místo rozdávajícího nebo hráče.</para>
+      <para>Pokud chcete rozdat nové karty po skončení hry se současnými kartami, klikněte na libovolnou kartu na stole.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-hit"> 
+      <title>Požádání o další kartu (Hit)</title> 
+      <para>Můžete si brát další karty, dokud není jejich součet 21 nebo více.</para>
+      <para>Pokud chcete přidat kartu, klikněte na libovolnou ze svých karet.</para>
+    </sect2>
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-stand"> 
+      <title>Zastavení braní karet (Stand)</title> 
+      <para>Zastavit braní dalších karet můžete kdykoliv po té, co vám rozdají první dvě karty.</para>
+      <para>Pokud chcete stát a další karty již nebrat, klikněte jednou na karty někoho jiného. Například, pokud existuje jen jedno místo hráče (tj. nerozdělili jste pár), klikněte na karty rozdávajícího a budete stát. Pokud jste pár rozdělili, můžete zastavit karty prvního hráče kliknutím na karty druhého hráče nebo karty rozdávajícího.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-double-down"> 
+      <title>Zdvojnásobení sázky (Double down)</title> 
+      <para>Pokud chcete zdvojnásobit sázku, po rozdání prvních dvou karet dvojitě klikněte na libovolný hráčův žeton .</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-split"> 
+      <title>Rozdělení páru (Split)</title> 
+      <para>Pokud chcete rozdělit pár, přesuňte vrchní kartu na libovolné prázdné místo na stole.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-surrender"> 
+      <title>Položení hry (Surrender)</title> 
+      <para>Zatím není implementované.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-get-hint"> 
+      <title>Získání rady</title> 
+      <para>Občas můžete program požádat o radu. To uděláte buď kliknutím na tlačítko <interface>Rada</interface> na panelu nástrojů nebo volbou položky <menuchoice><guisubmenu>Hra</guisubmenu><guimenuitem>Rada</guimenuitem></menuchoice> v nabídce.</para>
+    </sect2> 
+
+    <!-- ================ Usage Subsection ================================ -->
+    <sect2 id="blackjack-usage-keyboard-control"> 
+      <title>Ovládání z klávesnice</title> 
+      <para>Většinu činností ve hře můžete ovládat z klávesnice. <table><title>Ovládací klávesy</title><tgroup cols="2" align="left" colsep="1" rowsep="1"><thead><row><entry>Činnost</entry><entry>Klávesa</entry></row></thead><tbody><row><entry>Rozdat</entry><entry>ENTER</entry></row><row><entry>Vzít / Hit</entry><entry>H</entry></row><row><entry>Stát / Stand</entry><entry>S</entry></row><row><entry>Zdvojnásobit / Double down</entry><entry>D</entry></row><row><entry>Rozdělit / Split</entry><entry>P</entry></row><row><entry>Vzdát / Surrender</entry><entry>R</entry></row></tbody></tgroup></table></para>
+    </sect2> 
+  </sect1>
+
+  <!-- ============= Customization ============================= -->
+  <!-- Use this section to describe how to customize the application. -->
+  <sect1 id="blackjack-prefs"> 
+    <title>Nastavení</title> 
+    <para>Když chcete hru <application>Blackjack</application> nastavovat, zvolte <menuchoice><guimenu>Nastavení</guimenu><guimenuitem>Předvolby</guimenuitem></menuchoice>. Dialogové okno <guilabel>Předvolby BackJacku</guilabel> obsahuje následující části:</para> 
+    <itemizedlist> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-game"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-rules"/></para> 
+      </listitem> 
+      <listitem> 
+	<para> 
+	  <xref linkend="blackjack-prefs-cards"/></para> 
+      </listitem> 
+    </itemizedlist>
+<!-- =============== Customization Subsection ================ -->
+<!-- Use a new section to describe different tabbed sections on the Settings or Preferences
+	     dialog. -->
+    <sect2 id="blackjack-prefs-game"> 
+      <title>Hra</title> 
+      <variablelist> 
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Zobrazovat pravděpodobnosti karet</guilabel> </term> 
+	  <listitem> 
+	    <para>Zvolte tuto položku, pokud chcete zobrazovat pravděpodobnosti karet, které má rozdávající, a očekávané hodnoty pro různé hráčovi varianty.</para>
+	  </listitem> 
+	</varlistentry> 
+
+	<varlistentry> 
+	  <term> 
+	    <guilabel>Rychlé rozdávání</guilabel> </term> 
+	  <listitem> 
+	    <para>Zvolte tuto položku, pokud nechcete, aby počítač při rozdávání dělal mezi kartami prodlevy.</para>
+	  </listitem> 
+	</varlistentry> 
+
+      </variablelist> 
+    </sect2>
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-rules"> 
+      <title>Pravidla</title> 
+      <para>Zvolte si v seznamu variantu pravidel.</para>
+    </sect2> 
+
+    <!-- ============= Customization Subsection ===================== -->
+    <!-- Another tabbed section on the Preferences dialog. -->
+    <sect2 id="blackjack-prefs-cards"> 
+      <title>Styl karet</title> 
+      <para>Přizpůsobte si vzhled hracích karet.</para>
+    </sect2> 
+
+  </sect1>
+
+<!-- ============= Advanced ================================== -->
+  <sect1 id="blackjack-advanced">
+  <title>Pokročilé</title>
+  <para>
+  </para>
+
+  <sect2 id="blackjack-advanced-probabilities">
+    <title>Pravděpodobnosti karet rozdávajícího</title>
+    <para>Pokud je vybraná volba <guilabel>Zobrazovat pravděpodobnost karet</guilabel> v části <guilabel>Hra</guilabel> dialogového okna <guilabel>Předvolby</guilabel>, zobrazují se na ploše stolu nalevo od  místa rozdávajícího přesně propočítané pravděpodobnosti, s jakou mohou nastat různé možnosti karet rozdávajícího. Pravděpodobnosti jsou od nula do sta procent, kde nula znamená, že je nemožné, aby situace nastala a sto procent naopak situaci, která je jistá. Tyto pravděpodobnosti berou berou v úvahu všechny rozdané karty.</para>
+  </sect2>
+
+  <sect2 id="blackjack-advanced-expected-values">
+    <title>Očekávané hodnoty hráče</title>
+    <para>Pokud je vybraná volba <guilabel>Zobrazovat pravděpodobnost karet</guilabel> v části <guilabel>Hra</guilabel> dialogového okna <guilabel>Předvolby</guilabel>, zobrazují se na ploše stolu nalevo od místa rozdávajícího přesně propočítané očekávané hodnoty (v procentech vůči kartám rozdaným na úvod) dostupných možností hráče. Tyto hodnoty se vypočítávají na základě všech vašich karet a horní otočené karty rozdávajícího. Například mějme pro Stand (ukončení hry) uvedené číslo -12,345. To znamená, že pokud byste v současné hře pokračovali nesčetně mnohokrát a pokaždé volili Stand, s počáteční sázkou 1,00, pak by vaše průměrná ztráta byla 0,12345.</para>
+  </sect2>
+
+ </sect1>
+
+<!-- ============= Bugs ================================== -->
+<!-- This section is optional and is commented out by default. 
+     You can use it to describe known bugs and limitations of the 
+	  program if there are any - please be frank and list all
+     problems you know of. 
+  
+  <sect1 id="blackjack-bugs">
+  <title>Known Bugs and Limitations</title>
+  <para> </para>
+ </sect1>
+-->
+
+<!-- ============= About ================================== -->
+<!-- This section contains info about the program (not docs), such as
+      author's name(s), web page, license, feedback address. This
+      section is optional: primary place for this info is "About.." box of
+      the program. However, if you do wish to include this info in the
+      manual, this is the place to put it. Alternatively, you can put this information in the title page.-->
+  <sect1 id="blackjack-about"> 
+    <title>O aplikaci <application>Blackjack</application></title> 
+    <para><application>Blackjack</application> napsal William Jon McCann (<email>mccann@jhu.edu</email>).</para>
+    <para>Pokud chcete oznámit chybu nebo navrhnout vylepšení vztahující se k této aplikaci nebo této příručce, řiďte se instrukcemi uvedenými v tomto <ulink url="ghelp:user-guide?feedback-bugs" type="help">dokumentu</ulink>.</para>
+
+    <para>Tento program je šířen podle ustanovení GNU General Public License, vydávané Free Software Foundation; a to buď verze 2 této licence anebo (podle vlastního uvážení) kterékoliv pozdější verze. Kopii této licence naleznete pod tímto <ulink url="ghelp:gpl" type="help">odkazem</ulink> nebo v souboru COPYING přiloženém ke zdrojovým kódům tohoto programu. </para>
+
+  </sect1> 
+</article>
